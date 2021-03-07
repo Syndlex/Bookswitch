@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "bookswitch",
+  "version": "1.0",
+  "description": "Adds a private and a personal bookmark bar.",
+  "background": {
+    "scripts": [
+      "bookswitch.js"
+    ]
+  },
+  "permissions": [
+    "bookmarks"
+  ],
+  "commands": {
+    "toggle-feature": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "Send a 'toggle-feature' event"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "marcel@feixe.de"
+    }
+  }
+}
