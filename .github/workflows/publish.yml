@@ -5,6 +5,7 @@ jobs:
   Publish-Addon:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: ls
       - uses: trmcnvn/firefox-addon@v1
         with:
