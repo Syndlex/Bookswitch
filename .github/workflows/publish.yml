@@ -5,6 +5,7 @@ jobs:
   Publish-Addon:
     runs-on: ubuntu-latest
     steps:
+      - run: ls
       - uses: trmcnvn/firefox-addon@v1
         with:
           uuid: '{marcel@feixe.de}'
