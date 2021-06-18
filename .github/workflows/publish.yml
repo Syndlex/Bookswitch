@@ -16,10 +16,22 @@ jobs:
         with:
           cmd: build
           source: .
+      - name: "web-ext sign"
+        id: web-ext-sign
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: sign
+          source: ${{ steps.web-ext-build.outputs.target }}
+          channel: unlisted
+          apiKey: ${{ secrets.FIREFOX_API_KEY }}
+          apiSecret: ${{ secrets.FIREFOX_API_SECRET }}
+          timeout: 900000
+      - run: ls
+      - run: ls build
       - uses: trmcnvn/firefox-addon@v1
         with:
           uuid: '{marcel@feixe.de}'
-          xpi: build/my-addon.xpi
+          xpi: build/bookswitch.xpi
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
