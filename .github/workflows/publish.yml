@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  Publish-Addon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: trmcnvn/firefox-addon@v1
+        with:
+          uuid: '{marcel@feixe.de}'
+          xpi: build/my-addon.xpi
+          manifest: manifest.json
+          api-key: ${{ secrets.FIREFOX_API_KEY }}
+          api-secret: ${{ secrets.FIREFOX_API_SECRET }}

@@ -1,7 +1,9 @@
 {
+  "author": "Marcel (Syndlex) Feix",
+
   "manifest_version": 2,
   "name": "bookswitch",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Adds a private and a personal bookmark bar.",
   "background": {
     "scripts": [
@@ -14,7 +16,7 @@
   "commands": {
     "toggle-feature": {
       "suggested_key": {
-        "default": "Alt+Shift+R"
+        "default": "Ctrl+Shift+X"
       },
       "description": "Send a 'toggle-feature' event"
     }
