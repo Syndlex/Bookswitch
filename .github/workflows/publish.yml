@@ -27,11 +27,11 @@ jobs:
           apiSecret: ${{ secrets.FIREFOX_API_SECRET }}
           timeout: 900000
       - run: ls
-      - run: ls build
+      - run: ls web-ext-artifacts
       - uses: trmcnvn/firefox-addon@v1
         with:
           uuid: '{marcel@feixe.de}'
-          xpi: build/bookswitch.xpi
+          xpi: web-ext-artifacts/bookswitch.xpi
           manifest: manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
